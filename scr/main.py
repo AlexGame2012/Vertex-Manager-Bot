@@ -10,7 +10,7 @@ import random
 
 apihelper.proxy = {'https': 'socks5://127.0.0.1:10808'}
 
-bot = telebot.TeleBot(BOT_TOKEN)
+bot = telebot.TeleBot(BOT_TOKEN, threaded=True, num_threads=10)
 
 def parse_period(period_str):
     if not period_str:
