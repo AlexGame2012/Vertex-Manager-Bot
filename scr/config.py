@@ -2,6 +2,8 @@ BOT_TOKEN = "" #TOKEN from BotFather
 
 PREFIXES = ['!', '.', '/', 'Vertex ', 'Вертекс ']
 
+STARS_TO_VERTEX_RATE = 5
+
 RANKS = {
     0: "участник",
     1: "младший модератор",
