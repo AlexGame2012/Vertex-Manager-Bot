@@ -8,7 +8,7 @@ import time
 import re
 import random
 
-apihelper.proxy = {'https': 'socks5://127.0.0.1:10808'}
+apihelper.proxy = {'https': 'socks5://ip:port'} # #Your proxy server (required for the bot to work from Russia)
 
 bot = telebot.TeleBot(BOT_TOKEN, threaded=True, num_threads=10)
 
