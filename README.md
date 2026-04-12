@@ -84,6 +84,7 @@ CURRENCY_EMOJI = "⚡"
 ### Запуск
 
 ```bash
+cd src
 python main.py
 ```
 
@@ -93,12 +94,13 @@ python main.py
 
 ```
 Vertex-bot/
-├── main.py          # Основной код бота
-├── logic.py         # Работа с базой данных
-├── config.py        # Конфигурация (токен, префиксы, ранги)
-├── vertex_bot.db    # База данных SQLite (создаётся автоматически)
-├── requirements.txt # Зависимости
-└── README.md        # Документация
+├── src/
+│   ├── main.py          # Основной код бота
+│   ├── logic.py         # Работа с базой данных
+│   ├── config.py        # Конфигурация (токен, префиксы, ранги)
+│   └── requirements.txt # Зависимости
+├── vertex_bot.db        # База данных SQLite (создаётся автоматически)
+└── README.md            # Документация
 ```
 
 ---
@@ -125,7 +127,7 @@ Vertex-bot/
 - 📖 **Документация**: [alexstudiocode.ru/project/Vertex](https://alexstudiocode.ru/project/Vertex)
 - 🤖 **Демо-бот**: [@vertex_demo_bot](https://t.me/vertex_demo_bot)
 - 🆘 **Поддержка**: [support@alexstudiocode.ru](mailto:support@alexstudiocode.ru)
-- 🐙 **GitHub**: [AlexGame2012/Vertex-bot](https://github.com/AlexGame2012/Vertex-Manager-Bot)
+- 🐙 **GitHub**: [AlexGame2012/Vertex-Manager-Bot](https://github.com/AlexGame2012/Vertex-Manager-Bot)
 
 ---
 
@@ -133,7 +135,7 @@ Vertex-bot/
 
 Если вам нравится Vertex, поставьте звезду на GitHub — это помогает проекту развиваться!
 
-[![GitHub stars](https://img.shields.io/github/stars/AlexGame2012/Vertex-bot?style=social)](https://github.com/AlexGame2012/Vertex-Manager-Bot)
+[![GitHub stars](https://img.shields.io/github/stars/AlexGame2012/Vertex-Manager-Bot?style=social)](https://github.com/AlexGame2012/Vertex-Manager-Bot)
 
 ---
 
