@@ -3,8 +3,10 @@ from datetime import datetime, timedelta
 
 class Database:
     def __init__(self, db_file="vertex_bot.db"):
-        self.conn = sqlite3.connect(db_file, check_same_thread=False)
+        self.conn = sqlite3.connect(db_file, check_same_thread=False, timeout=10)
         self.cursor = self.conn.cursor()
+        self.cursor.execute("PRAGMA journal_mode=WAL")
+        self.cursor.execute("PRAGMA synchronous=NORMAL")
         self._init_tables()
     
     def _init_tables(self):
