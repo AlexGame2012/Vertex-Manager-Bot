@@ -20,6 +20,21 @@ class Database:
                 last_seen TIMESTAMP
             )
         ''')
+
+        self.cursor.execute('''
+            CREATE TABLE IF NOT EXISTS crypto_payments (
+                id INTEGER PRIMARY KEY AUTOINCREMENT,
+                user_id INTEGER,
+                asset TEXT,
+                amount REAL,
+                vertexes INTEGER,
+                invoice_id TEXT UNIQUE,
+                payload TEXT,
+                status TEXT DEFAULT 'pending',
+                created_at TIMESTAMP,
+                paid_at TIMESTAMP
+            )
+        ''')
         
         self.cursor.execute('''
             CREATE TABLE IF NOT EXISTS moderators (
@@ -384,5 +399,39 @@ class Database:
         self.cursor.execute("INSERT OR REPLACE INTO commands_access (chat_id, command, min_rank) VALUES (?,?,?)",
                            (chat_id, command, min_rank))
         self.conn.commit()
+
+    # ========== МЕТОДЫ ДЛЯ КРИПТОПЛАТЕЖЕЙ ==========
+
+    def create_crypto_payment(self, user_id, asset, amount, vertexes, invoice_id, payload):
+            self.cursor.execute('''
+                INSERT INTO crypto_payments 
+                (user_id, asset, amount, vertexes, invoice_id, payload, status, created_at)
+                VALUES (?, ?, ?, ?, ?, ?, 'pending', ?)
+            ''', (user_id, asset, amount, vertexes, invoice_id, payload, datetime.now()))
+            self.conn.commit()
+
+    def create_crypto_payment(self, user_id, asset, amount, vertexes, invoice_id, payload):
+            self.cursor.execute('''
+                INSERT INTO crypto_payments 
+                (user_id, asset, amount, vertexes, invoice_id, payload, status, created_at)
+                VALUES (?, ?, ?, ?, ?, ?, 'pending', ?)
+            ''', (user_id, asset, amount, vertexes, invoice_id, payload, datetime.now()))
+            self.conn.commit()
+
+    def confirm_crypto_payment(self, invoice_id):
+            self.cursor.execute('''
+                UPDATE crypto_payments 
+                SET status = 'paid', paid_at = ? 
+                WHERE invoice_id = ? AND status = 'pending'
+            ''', (datetime.now(), invoice_id))
+            self.conn.commit()
+            return self.cursor.rowcount > 0
+
+    def get_pending_crypto_payment(self, invoice_id):
+            self.cursor.execute('''
+                SELECT user_id, vertexes FROM crypto_payments 
+                WHERE invoice_id = ? AND status = 'pending'
+            ''', (invoice_id,))
+            return self.cursor.fetchone()
 
 db = Database()
