@@ -2,7 +2,7 @@
 
 **Vertex** — мощный и современный чат-менеджер для Telegram с продвинутой модерацией, экономикой, подарками и азартными играми. Бот автоматизирует управление чатом, помогая администраторам поддерживать порядок и вовлекать участников.
 
-[![GitHub release](https://img.shields.io/badge/version-1.0.2-blue.svg)](https://github.com/AlexGame2012/Vertex-bot)
+[![GitHub release](https://img.shields.io/badge/version-1.0.2-blue.svg)](https://github.com/AlexGame2012/Vertex-Manager-Bot)
 [![Python](https://img.shields.io/badge/python-3.11+-green.svg)](https://www.python.org/)
 [![Telegram](https://img.shields.io/badge/telegram-bot-blue.svg)](https://t.me/vertex_demo_bot)
 
