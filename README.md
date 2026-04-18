@@ -125,7 +125,6 @@ Vertex-bot/
 ## 🔗 Ссылки
 
 - 📖 **Документация**: [alexstudiocode.ru/project/Vertex](https://alexstudiocode.ru/project/Vertex)
-- 🤖 **Демо-бот**: [@vertex_demo_bot](https://t.me/vertex_demo_bot)
 - 🆘 **Поддержка**: [support@alexstudiocode.ru](mailto:support@alexstudiocode.ru)
 - 🐙 **GitHub**: [AlexGame2012/Vertex-Manager-Bot](https://github.com/AlexGame2012/Vertex-Manager-Bot)
 
