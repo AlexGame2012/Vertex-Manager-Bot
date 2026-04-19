@@ -1,8 +1,8 @@
-BOT_TOKEN = "" #TOKEN from BotFather
+BOT_TOKEN = "YOUR_TOKEN" #TOKEN from BotFather
 
-PREFIXES = ['!', '.', '/', 'Vertex ', 'Вертекс ']
+STARS_TO_VERTEX_RATE = 5 #How much will the user get for 1 star
 
-STARS_TO_VERTEX_RATE = 5
+PREFIXES = ['!', '.', '/', 'Vertex ', 'Вертекс '] #Where do the commands start?
 
 RANKS = {
     0: "участник",
@@ -12,9 +12,9 @@ RANKS = {
     4: "старший администратор",
     5: "создатель",
     6: "отключено"
-}
+} #Ranks
 
-CURRENCY_NAME = "Вертексов"
-CURRENCY_EMOJI = "⚡"
+CURRENCY_NAME = "Вертексов" #Name of the Currency
+CURRENCY_EMOJI = "⚡" #Currency Emojis
 
 MASTER_ID = 123456789 #Your Telegram ID
